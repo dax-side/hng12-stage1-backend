@@ -51,6 +51,12 @@ function digitSum(n) {
     .reduce((acc, digit) => acc + parseInt(digit, 10), 0);
 }
 
+// Add this route BEFORE the /api/classify-number endpoint
+app.get("/get", (req, res) => {
+  console.log("Test endpoint hit!");
+  res.send("Test endpoint working!");
+});
+
 app.get("/api/classify-number", async (req, res) => {
   const numParam = req.query.number;
 
