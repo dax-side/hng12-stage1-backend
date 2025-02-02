@@ -35,7 +35,8 @@ function isPerfect(n) {
 
 // Helper function to check for Armstrong numbers
 function isArmstrong(n) {
-  const str = n.toString();
+  const absoluteNumber = Math.abs(n); // Add this line
+  const str = absoluteNumber.toString(); // Use absolute value
   const power = str.length;
   const sum = str
     .split("")
@@ -45,10 +46,8 @@ function isArmstrong(n) {
 
 // Helper function to calculate the sum of digits
 function digitSum(n) {
-  return n
-    .toString()
-    .split("")
-    .reduce((acc, digit) => acc + parseInt(digit, 10), 0);
+  const absoluteNumber = Math.abs(n); // Add this line
+  return absoluteNumber.toString().split("").reduce((acc, digit) => acc + parseInt(digit, 10), 0);
 }
 
 // Add this route BEFORE the /api/classify-number endpoint
