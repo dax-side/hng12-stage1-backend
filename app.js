@@ -38,9 +38,13 @@ function isArmstrong(n) {
   const absoluteNumber = Math.abs(n);
   const str = absoluteNumber.toString();
   const power = str.length;
+  
+  // Exclude single-digit numbers
+  if (power === 1) return false;
+
   const sum = str.split('').reduce((acc, digit) => 
     acc + Math.pow(parseInt(digit, 10), power), 0);
-  return sum === absoluteNumber; // Fix this line
+  return sum === absoluteNumber;
 }
 
 // Helper function to calculate the sum of digits
