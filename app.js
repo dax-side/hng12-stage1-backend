@@ -35,13 +35,12 @@ function isPerfect(n) {
 
 // Helper function to check for Armstrong numbers
 function isArmstrong(n) {
-  const absoluteNumber = Math.abs(n); // Add this line
-  const str = absoluteNumber.toString(); // Use absolute value
+  const absoluteNumber = Math.abs(n);
+  const str = absoluteNumber.toString();
   const power = str.length;
-  const sum = str
-    .split("")
-    .reduce((acc, digit) => acc + Math.pow(parseInt(digit, 10), power), 0);
-  return sum === n;
+  const sum = str.split('').reduce((acc, digit) => 
+    acc + Math.pow(parseInt(digit, 10), power), 0);
+  return sum === absoluteNumber; // Fix this line
 }
 
 // Helper function to calculate the sum of digits
