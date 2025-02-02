@@ -6,6 +6,15 @@
 
 An API that classifies numbers into mathematical categories (prime, perfect, Armstrong) and provides interesting facts from [NumbersAPI](http://numbersapi.com).
 
+---
+
+## Built for the HNG Internship 🚀
+This project was developed as part of the [HNG Internship](https://hng.tech)
+Looking to hire Node.js developers? Check out:  
+👉 **[HNG Node.js Developers for Hire](https://hng.tech/hire/nodejs-developers)**
+
+---
+
 ## API Endpoint 🌐
 ```
 GET /api/classify-number?number={integer}
