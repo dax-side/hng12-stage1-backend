@@ -53,6 +53,7 @@ function digitSum(n) {
 // Add this route BEFORE the /api/classify-number endpoint
 app.get("/get", (req, res) => {
   console.log("Test endpoint hit!");
+  res.header("Access-Control-Allow-Origin", "*");
   res.send("Test endpoint working!");
 });
 
